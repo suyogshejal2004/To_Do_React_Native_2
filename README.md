@@ -25,9 +25,13 @@ A simple **React Native** app for managing personal goals. Users can add, delete
 
 ## 📸 Screenshots
 
-| Add Goal | Delete Goal |
-|----------|------------|
-| <img src="screenshots/add-goal.png" width="250"/> | <img src="screenshots/delete-goal.png" width="250"/> |
+
+Here are some screenshots of the project:
+
+![Screenshot 1](https://raw.githubusercontent.com/user-attachments/assets/b7c1dd9f-66e3-4f32-a082-079670d1812c)
+
+![Screenshot 2](https://raw.githubusercontent.com/user-attachments/assets/b7c1dd9f-66e3-4f32-a082-079670d1812c)
+
 
 ## 🛠️ Installation & Setup
 
@@ -87,7 +91,7 @@ This project is licensed under the **MIT License**.
 
 ---
 
-💡 **Created with ❤️ by [Your Name](https://github.com/YOUR_GITHUB_USERNAME)**  
+💡 **Created with ❤️ by [Your Name](https://github.com/suyogshejal2004)**  
 ```
 
 ---
