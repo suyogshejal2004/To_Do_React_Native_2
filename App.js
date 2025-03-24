@@ -1,28 +1,67 @@
-import { useState } from "react";
-import { StyleSheet, View, FlatList } from "react-native";
+import { useState, useEffect } from "react";
+import { StyleSheet, View, FlatList, Button } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import GoalItem from "./components/goalitem";
 import GoalInput from "./components/goalinput";
 
 export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false);
 
-  function addGoalHandler(goalText) {
-    setCourseGoals((currentGoals) => [
-      ...currentGoals,
-      { id: Math.random().toString(), text: goalText },
-    ]);
+  // Load saved goals when the app starts
+  useEffect(() => {
+    loadGoals();
+  }, []);
+
+  // Function to load saved goals from AsyncStorage
+  async function loadGoals() {
+    try {
+      const storedGoals = await AsyncStorage.getItem("goals");
+      if (storedGoals) {
+        setCourseGoals(JSON.parse(storedGoals));
+      }
+    } catch (error) {
+      console.error("Failed to load goals:", error);
+    }
   }
 
-  function deleteGoalHandler(goalId) {
-    setCourseGoals((currentGoals) => {
-      return currentGoals.filter((goal) => goal.id !== goalId);
-    });
+  // Function to save goals in AsyncStorage
+  async function saveGoals(goalsToSave) {
+    try {
+      await AsyncStorage.setItem("goals", JSON.stringify(goalsToSave));
+    } catch (error) {
+      console.error("Failed to save goals:", error);
+    }
+  }
+
+  // Add new goal and save to AsyncStorage
+  async function addGoalHandler(goalText) {
+    const newGoals = [
+      ...courseGoals,
+      { id: Math.random().toString(), text: goalText },
+    ];
+    setCourseGoals(newGoals);
+    await saveGoals(newGoals);
+    setModalVisible(false);
+  }
+
+  // Delete goal and update AsyncStorage
+  async function deleteGoalHandler(goalId) {
+    const updatedGoals = courseGoals.filter((goal) => goal.id !== goalId);
+    setCourseGoals(updatedGoals);
+    await saveGoals(updatedGoals);
   }
 
   return (
     <View style={styles.appContainer}>
-      <GoalInput onAddGoal={addGoalHandler} />
+      <Button title="Add New Goal" onPress={() => setModalVisible(true)} />
+      <GoalInput
+        visible={modalVisible}
+        onAddGoal={addGoalHandler}
+        onCancel={() => setModalVisible(false)}
+      />
       <FlatList
+        style={styles.goalList}
         data={courseGoals}
         renderItem={(itemData) => (
           <GoalItem
@@ -42,6 +81,9 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 50,
     paddingHorizontal: 20,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#264653",
+  },
+  goalList: {
+    marginTop: 10,
   },
 });

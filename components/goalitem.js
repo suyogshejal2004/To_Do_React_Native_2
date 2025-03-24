@@ -14,10 +14,10 @@ export default GoalItem;
 
 const styles = StyleSheet.create({
   goalItem: {
-    paddingVertical: 12,
-    paddingHorizontal: 15,
+    paddingVertical: 14,
+    paddingHorizontal: 18,
     marginBottom: 10,
-    backgroundColor: "#4ecdc4",
+    backgroundColor: "#2A9D8F", // Matches GoalInput for a unified theme
     borderRadius: 12,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 3 },
@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   goalText: {
-    color: "#fff",
+    color: "#F4F1DE",
     fontSize: 16,
+    fontWeight: "bold",
   },
 });
