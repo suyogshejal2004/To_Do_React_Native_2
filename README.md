@@ -28,8 +28,7 @@ A simple **React Native** app for managing personal goals. Users can add, delete
 
 Here are some screenshots of the project:
 
-![Screenshot 1](https://raw.githubusercontent.com/user-attachments/assets/b7c1dd9f-66e3-4f32-a082-079670d1812c)
-
+![Image](https://github.com/user-attachments/assets/586b94e5-fe67-47c8-836f-a7bb8af08bd8)
 ![Screenshot 2](https://raw.githubusercontent.com/user-attachments/assets/b7c1dd9f-66e3-4f32-a082-079670d1812c)
 
 
