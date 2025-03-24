@@ -1,7 +1,12 @@
 Here's a well-structured `README.md` file for your **React Native Goals App**. It includes a project description, features, setup instructions, and more.  
 
----
+## 📸 Screenshots
+
+
+Here are some screenshots of the project:
+
 ![Image](https://github.com/user-attachments/assets/586b94e5-fe67-47c8-836f-a7bb8af08bd8)
+![Screenshot 2](https://raw.githubusercontent.com/user-attachments/assets/b7c1dd9f-66e3-4f32-a082-079670d1812c)
 ### 📌 **README.md**  
 
 ```md
@@ -23,13 +28,7 @@ A simple **React Native** app for managing personal goals. Users can add, delete
 - **react-native-vector-icons** (for icons)
 - **Expo / React Native CLI**
 
-## 📸 Screenshots
 
-
-Here are some screenshots of the project:
-
-![Image](https://github.com/user-attachments/assets/586b94e5-fe67-47c8-836f-a7bb8af08bd8)
-![Screenshot 2](https://raw.githubusercontent.com/user-attachments/assets/b7c1dd9f-66e3-4f32-a082-079670d1812c)
 
 
 ## 🛠️ Installation & Setup
