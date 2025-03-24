@@ -1,7 +1,7 @@
 Here's a well-structured `README.md` file for your **React Native Goals App**. It includes a project description, features, setup instructions, and more.  
 
 ---
-
+![Image](https://github.com/user-attachments/assets/b7c1dd9f-66e3-4f32-a082-079670d1812c)
 ### 📌 **README.md**  
 
 ```md
