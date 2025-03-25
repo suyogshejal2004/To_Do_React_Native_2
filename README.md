@@ -89,7 +89,7 @@ This project is licensed under the **MIT License**.
 
 ---
 
-💡 **Created with ❤️ by [Your Name](https://github.com/suyogshejal2004)**  
+💡 **Created with ❤️ by [suyogshejal2004](https://github.com/suyogshejal2004)**  
 ```
 
 ---
